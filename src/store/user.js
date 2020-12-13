@@ -1,3 +1,4 @@
+import firebase from 'firebase/app'
 import User from './models/UserModel'
 
 export default {
@@ -17,7 +18,7 @@ export default {
     },
     // Logout
     async logoutUser ({commit}) {
-      // firebase.auth().signOut()
+      firebase.auth().signOut()
       // Send mutation null
       commit('setUser', null)
     }
